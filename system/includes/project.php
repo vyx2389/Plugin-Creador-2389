@@ -201,17 +201,17 @@ if (isset($_POST['project']))
 
 $project_table = null;
 
-$project_table .= '<h3>Projects</h3>';
+$project_table .= '<h3>Proyectos</h3>';
 $project_table .= '<div class="panel panel-default">';
 $project_table .= '<div class="panel-body">';
 $project_table .= '<div class="table-responsive">';
 $project_table .= '<table class="table table-striped">';
 $project_table .= '
-<tr><th>Project Name</th>
-<th>Author</th>
-<th>Status</th>
-<th>Lock</th>
-<th>Delete</th>
+<tr><th>Nombre</th>
+<th>Autor</th>
+<th>Estado</th>
+<th>Bloqueo</th>
+<th>Borrar</th>
 </tr>';
 
 foreach (glob(PROJECT_PATH . "/*.project.json") as $filename)
@@ -228,11 +228,11 @@ foreach (glob(PROJECT_PATH . "/*.project.json") as $filename)
         $status_project = '
   <div class="btn-group btn-group-xs">
     <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
-      Active
+      Activo
       <span class="caret"></span>
     </button>
     <ul class="dropdown-menu">
-      <li><a href="./?page=project&id=' . $real_file . '&act=pending"><span class="fa fa-exchange"></span> Pending</a></li>
+      <li><a href="./?page=project&id=' . $real_file . '&act=pending"><span class="fa fa-exchange"></span> Pendiente</a></li>
     </ul>
   </div>
         ';
@@ -245,7 +245,7 @@ foreach (glob(PROJECT_PATH . "/*.project.json") as $filename)
       <span class="caret"></span>
     </button>
     <ul class="dropdown-menu">
-      <li><a href="./?page=project&id=' . $real_file . '&act=active"><span class="fa fa-exchange"></span> Active</a></li>
+      <li><a href="./?page=project&id=' . $real_file . '&act=active"><span class="fa fa-exchange"></span> Activo</a></li>
     </ul>
   </div>
   ';
@@ -297,7 +297,7 @@ foreach (glob(PROJECT_PATH . "/*.project.json") as $filename)
     ';
 }
 $project_table .= '</table>';
-$project_table .= '<a href="./?page=project&act=reset" class="btn btn-danger">Reset Session</a>';
+$project_table .= '<a href="./?page=project&act=reset" class="btn btn-danger">Reiniciar</a>';
 $project_table .= '</div>';
 $project_table .= '</div>';
 $project_table .= '</div>';
@@ -568,7 +568,7 @@ switch ($_GET['sub'])
             switch ($_GET['err'])
             {
                 case 'delete_done':
-                    $content .= '<div class="alert alert-success" ><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><p><strong>Well done!</strong> You successfully delete the project</p></div>';
+                    $content .= '<div class="alert alert-success" ><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><p><strong>¡Bien hecho!</strong> You successfully delete the project</p></div>';
                     break;
                 case 'current_project':
 
@@ -698,13 +698,13 @@ switch ($_GET['sub'])
             {
 
                 case 'backup_done':
-                    $content .= '<div class="alert alert-success" ><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><p><strong>Well done!</strong> You successfully backup this project</p></div>';
+                    $content .= '<div class="alert alert-success" ><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><p><strong>¡Bien hecho!</strong> You successfully backup this project</p></div>';
                     break;
                 case 'restore_done':
-                    $content .= '<div class="alert alert-success" ><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><p><strong>Well done!</strong> You successfully restore the project</p></div>';
+                    $content .= '<div class="alert alert-success" ><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><p><strong>¡Bien hecho!</strong> You successfully restore the project</p></div>';
                     break;
                 case 'trash_done':
-                    $content .= '<div class="alert alert-success" ><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><p><strong>Well done!</strong> You successfully delete restore file the project</p></div>';
+                    $content .= '<div class="alert alert-success" ><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><p><strong>¡Bien hecho!</strong> You successfully delete restore file the project</p></div>';
                     break;
                 case 'restore_dialog':
                     $content .= '
@@ -765,7 +765,7 @@ switch ($_GET['sub'])
         $content .= '<div class="tab-content">';
         $content .= '<div class="tab-pane fade in active"  id="projects">';
         $content .= '<br/>';
-        $content .= '<div class="alert alert-success" ><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><p><strong>Well done!</strong> You successfully unlock this project, now you <ins>can edit</ins> this project</p></div>';
+        $content .= '<div class="alert alert-success" ><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><p><strong>¡Bien hecho!</strong> Has desbloqueado con éxito este proyecto, ahora <ins>puede editar</ins> el proyecto</p></div>';
         $content .= $project_table;
         $content .= '</div>';
         $content .= '<div class="tab-pane fade" id="properties">';
@@ -788,7 +788,7 @@ switch ($_GET['sub'])
         $content .= '<div class="tab-content">';
         $content .= '<div class="tab-pane fade in active"  id="projects">';
         $content .= '<br/>';
-        $content .= '<div class="alert alert-success" ><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><p><strong>Well done!</strong> You successfully lock this project, now you <ins>can not edit</ins> this project</p></div>';
+        $content .= '<div class="alert alert-success" ><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><p><strong>¡Bien hecho!</strong> You successfully lock this project, now you <ins>can not edit</ins> this project</p></div>';
         $content .= $project_table;
         $content .= '</div>';
         $content .= '<div class="tab-pane fade" id="properties">';

@@ -259,7 +259,8 @@ $dropdown .= '
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="./"><strong>WP Plugin</strong> Maker</a>
+     <!-- <a class="navbar-brand" href="./"></a> -->
+     <p class="navbar-brand"> <strong>2389 WP</strong> Plugin Maker </p>
     </div>
     
     <div class="navbar-collapse collapse js-navbar-collapse" role="navigation">
@@ -269,19 +270,19 @@ $dropdown .= '
         <li><a href="./"><span class="fa fa-home"></span> Home</a></li>
         
         <li>
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-th"></span> Go to</a>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-th"></span> Ir a</a>
         ' . $goto . '
         </li>
         
         <li>
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-gavel"></span> Tools</a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-gavel"></span> Herramientas</a>
                 <ul class="dropdown-menu">
                     <li class=""><a href="./?page=sample-code"><span class="fa fa-wordpress"></span> WordPress API Tool</a></li>
                     <li class=""><a href="./?page=dashicon"><span class="fa fa-flag"></span> Dashicon</a></li>
                 </ul>
         </li>
-        <li><a href="./?page=support"><span class="fa fa-support"></span> Contact Us</a></li>
-        <li><a href="./docs/"><span class="fa fa-question"></span> Help</a></li>
+        <!--  <li><a href="./?page=support"><span class="fa fa-support"></span> Contact Us</a></li>
+        <li><a href="./docs/"><span class="fa fa-question"></span> Help</a></li> -->
          
       </ul>
       

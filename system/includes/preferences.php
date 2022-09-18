@@ -126,12 +126,7 @@ $content .= '</div>';
 $content .= '<hr/>';
 
 
-$content .= '<div class="form-group">';
-$content .= '<label class="col-sm-4 control-label" for="max_postmeta">Purchase Code</label>';
-$content .= '<div class="col-sm-4">';
-$content .= '<input type="text" id="purchase_code" name="purchase_code" class="form-control" placeholder="78ebd46f-4b67-4632-a5d6-202b73d031ed" value="' . $purchase_code . '" />';
-$content .= '</div>';
-$content .= '</div>';
+
 
 $content .= '<hr/>';
 $content .= '<div class="form-group">';

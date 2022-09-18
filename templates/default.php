@@ -31,10 +31,10 @@
 
 <div class="md-70"></div> 
 <div class="<?php echo TEMPLATES_CONTAINER; ?>">
-    <div class="alert alert-success">
+   <!-- <div class="alert alert-success">
     <h4><strong>iWP-DevToolz v2 (Beta)</strong></h4>
     <p>Hi! We have made the plugin maker v2, this is more features and easier to use than the previous version, We ask for help trying this latest version. If you have an idea or bug report, send it to: <strong>iwpdev@ihsana.com</strong></p>
-    </div>
+    </div> -->
             
     <div class="row">
     <?php if( JZ_FULL_PAGE == false ){ ?>
@@ -50,7 +50,7 @@
                     <?php echo JZ_CONTENT; ?>
                 </div>
             </div>
-             <p>Copyright &copy; 2021 - <a href="https://codecanyon.net/item/wordpress-plugin-maker-freelancer-version/13581496?ref=codegenerator">WP Plugin Maker</a>, you have version: <label class="text-danger">rev21.01.01</label></p>
+            <!-- <p>Copyright &copy; 2021 - <a href="https://codecanyon.net/item/wordpress-plugin-maker-freelancer-version/13581496?ref=codegenerator">WP Plugin Maker</a>, you have version: <label class="text-danger">rev21.01.01</label></p> -->
         </div>
 
     <?php }else{ ?>           
