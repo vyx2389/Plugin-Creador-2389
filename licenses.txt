@@ -1,0 +1,62 @@
+LICENSES 
+	http://codecanyon.net/licenses/terms/regular
+	http://codecanyon.net/licenses/terms/extended
+	http://codecanyon.net/licenses/terms/tools
+
+
+THIRD PARTIES LICENSES
+
+	== Colorbox == 	
+	MIT License 	
+	http://www.jacklmoore.com/colorbox
+
+
+	== EditArea == 
+	by Christophe Dolivet 	
+	Licensed under the Apache License, Version 2.0
+	GNU Library Public License, version 2
+	BSD License	https://sourceforge.net/projects/editarea/
+
+	== jsTree == 
+	by Ivan Bozhanov ==  	
+	MIT License 	
+	http://jstree.com/
+
+	== bootstrap tagsInput == 
+	by Tim Schlechter 	
+	MIT License 
+		
+	== jQuery Validation Plugin == 
+	by Jorn Zaefferer 	
+	MIT License 	
+	http://jqueryvalidation.org/validate/
+
+
+	== Bootstrap == 
+	by Twitter, Inc 	
+	MIT License 	
+	http://getbootstrap.com/
+
+
+	== jQuery == 
+	by jQuery Foundation, Inc 	
+	jquery.org/license 	
+	http://jquery.org
+
+	== Holder - client side image placeholders == 
+	by Ivan Malopinsky 	
+	MIT License 	
+	http://holderjs.com
+
+
+	== Font Awesome == 
+	by davegandy 	
+	MIT License
+	SIL OFL 1.1 	
+	http://fontawesome.io
+
+	== Dashicon == 
+	by wordpress.org 	
+	GNU General Public License version 2
+	SIL OFL 1.1 	
+	http://wordpress

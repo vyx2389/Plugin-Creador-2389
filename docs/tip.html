@@ -1,0 +1,32 @@
+<h4>Add reCAPTCHA to Shortcode</h4>
+<li>Register <a href="https://www.google.com/recaptcha/admin">reCAPTCHA</a></li>
+<li>Download <a href="https://github.com/google/recaptcha/blob/1.0.0/php/recaptchalib.php">recaptchalib.php</a> and save in 
+	<code>/plugin-maker/project/plugins/assets/your_plugin/includes/</code>
+</li>
+<li>Then copy file shortcode do want to edit
+	<code>/wp-content/plugins/your_plugin/includes/xxx_shorcodes.xxxx.inc.php</code>
+	to 
+	<code>/plugin-maker/project/plugins/assets/your_plugin/includes/xxx_shorcodes.xxxx.inc.php</code>
+</li>
+
+// your secret key
+$secret = $this->options["recaptcha_sitekey"];
+ 
+// empty response
+$response = null;
+ 
+// check secret key
+$reCaptcha = new ReCaptcha($secret);
+
+if ($_POST["g-recaptcha-response"]) {
+    $response = $reCaptcha->verifyResponse(
+        $_SERVER["REMOTE_ADDR"],
+        $_POST["g-recaptcha-response"]
+    );
+}
+
+ if ($response != null && $response->success) {
+    echo "Hi, thanks for submitting the form!";
+  } else {
+  
+  }

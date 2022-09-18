@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+	<meta http-equiv="content-type" content="text/html" />
+	<meta name="author" content="Jasman" />  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>Code Explanation</title>
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/css/docs.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<!-- nav -->
+<div class="navbar navbar-static-top js-docs-nav" id="top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="index.html" class="navbar-brand">WP Plugin Maker</a>
+    </div>
+    <div class="collapse navbar-collapse js-navbar-collapse" role="navigation" >
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="getting-started.html">Getting started</a>
+        </li>
+        <li class="active">
+          <a href="code.html">Code Explanation</a>
+        </li>
+        <li>
+          <a href="licenses.html">Licenses</a>
+        </li>
+        <li>
+          <a href="faqs.html">FAQs</a>
+        </li>
+        <li>
+          <a href="mailto:info@ihsana.com">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- .//nav -->
+
+<div class="js-docs-header" id="content">
+      <div class="container">
+        <h1>Code Explanation</h1>
+        <p>Structure File, CSS, JS and PHP Code</p>
+      </div>
+</div>
+
+<div class="container">
+    <div class="col-md-9">
+ 
+ 
+        <!-- Code Explanation -->
+        
+        <h2 id="codes" class="page-header">Code Explanation</h2>
+        <h3 id="files">Structure Files</h3>
+        <p>This tool will create a plugin with a file structure is as follows:</p>
+        <p><img data-src="holder.js/745x885" src="assets/images/screenshoot-1501.png" class="img-thumbnail" height="885" width="745"></p>
+        <h4 id="code_css">CSS Explanation</h4>
+        <p>For CSS Folder exist in the folder assets, CSS file naming is as follows:</p>
+        
+        <p><img src="assets/images/screenshoot-1502.png" height="126" width="241" data-src="holder.js/241x126" class="img-thumbnail" ></p>
+        <p>Firstly we will start off by seeing the wrong way of adding stylesheets to WordPress and a common way I've seen people add stylesheets to WordPress. Because CSS stylesheets are added to the head tag of a web page and people are familiar with the wp_head action, they will use this to add stylesheets to the page.</p>
+        <p><img src="assets/images/screenshoot-1503.png" height="70" width="482" data-src="holder.js/482x70" class="img-thumbnail"/></p>
+        <p>Use <a href="#style">CSS menu</a> on the left to add css file or you can use the function <strong>wp_enqueue_style</strong>. For coding, HTML tag given id with the prefix taken from Plugin <strong>ShortName</strong>, Use <a target="_blank" href="https://www.google.com/search?q=Open+the+Inspector+Developer+Tools"><strong>Inspect Element</strong></a> on the browser to know the ID/CLASS, it is advisable to use the <a href="https://make.wordpress.org/core/handbook/best-practices/coding-standards/css/">best practice</a> coding css wordpress</p>
+        <h3 id="code_js">JS Explanation</h3>
+        <p>For JS file also exist in the folder assets, JS file naming is as follows:</p>
+        <p><img class="img-thumbnail" data-src="holder.js/222x126" src="assets/images/screenshoot-1504.png" height="126" width="222"></p>
+        <p>To insert JS file you also have to use the existing <a href="#js">Javascript menu</a> on the left side of the tool or if it can use the manual coding use the function wp_enqueue_script and Please read <a href="https://developer.wordpress.org/themes/advanced-topics/javascript-best-practices/" target="_blank">JavaScript Best Practices</a> as guidance</p>
+        
+        <h3 id="code_php">PHP Explanation</h3>
+        <p>Together with the file name, the function name as well. Consider the example shown below:</p>
+        <p><img data-src="holder.js/699x754" src="assets/images/screenshoot-1505.png" class="img-thumbnail" height="699" width="754"></p>
+        
+        <p>In editing the file of course you need a reference, for there have been references to the codes. 
+    That way you can get easy reference, this will be easier if you use editor that supports IDE like netbean.</p>
+        <p><img data-src="holder.js/786x596" src="assets/images/screenshoot-1506.png" class="img-thumbnail" height="596" width="786"></p>
+        <p>Maybe there are some variables that are not needed by you, you can remove it if it is not needed. It is useful to simplify / speed up your work by displaying the variable using the echo / print.</p>
+        
+        
+        <p><img data-src="holder.js/994x687" src="assets/images/screenshoot-1507.png" class="img-thumbnail" height="687" width="994"/></p>
+        
+        
+        <!-- //Code Explanation -->
+        
+    </div>
+    <div class="col-md-3">
+          <div class="js-docs-sidebar hidden-print" role="complementary">
+            <ul class="nav docs-sidenav">
+                <li>
+                  <a href="#code">Code Explanation</a>
+                  <ul class="nav">
+                    <li><a href="#files">Structure Files</a></li>
+                    <li><a href="#code_css">CSS Explanation</a></li>
+                    <li><a href="#code_js">JS Explanation</a></li>
+                    <li><a href="#code_php">PHP Explanation</a></li>
+                  </ul>
+                </li>              
+            </ul>
+       </div>
+    </div>
+</div>
+
+
+<div class="footer">
+    <div class="container">
+        <p>Copyright &copy; 2015 <a href="http://ihsana.com">Ihsana Global Solusindo</a>. All rights reserved.</p>
+    </div>
+</div>
+<script src="./assets/js/holder.min.js"></script>
+<script src="./assets/js/jquery.min.js"></script>
+<script src="./assets/js/bootstrap.min.js"></script>
+<script src="./assets/js/docs.js"></script>
+
+</body>
+</html>

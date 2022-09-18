@@ -1,0 +1,405 @@
+body {
+  position: relative; /* For scrollspy */
+}
+
+h2.page-header {
+    color:#7598C4;
+    font-family:arial;
+    font-weight:600
+}
+
+h3 {
+    color:#EEA752;
+    font-family:arial;
+    font-weight:600
+}
+
+section {
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
+
+.footer{background: #282A2B;padding-top:15px;padding-top:15px;color: #FFF;font-size: 14px;color:#fefefe;}
+
+.marketing{padding-right:15px;padding-left:15px}
+.marketing .col-lg-4{margin-bottom:20px;text-align:center}
+.marketing h2{font-weight:normal}
+.marketing .col-lg-4 p{margin-right:10px;margin-left:10px}
+.featurette-divider{margin:80px 0}
+.featurette-heading{font-weight:300;line-height:1;letter-spacing:-1px}
+@media (min-width:768px){.marketing{padding-right:0;padding-left:0}
+.featurette-heading{font-size:50px}}
+@media (min-width:992px){.featurette-heading{margin-top:120px}}
+
+
+.js-docs-booticon {
+  display: block;
+  font-weight: 500;
+  color: #fff;
+  background-color: #563d7c;
+  border-radius: 15%;
+  cursor: default;
+  text-align: center;
+}
+.js-docs-booticon-sm {
+  width: 90px;
+  height: 30px;
+  font-size: 20px;
+  line-height: 28px;
+}
+.js-docs-booticon-lg {
+  width: 360px;
+  height: 144px;
+  font-size: 108px;
+  line-height: 140px;
+}
+.js-docs-booticon-inverse {
+  color: #563d7c;
+  background-color: #fff;
+}
+.js-docs-booticon-outline {
+  background-color: transparent;
+  border: 1px solid #cdbfe3;
+}
+
+
+/* Outline button for use within the docs */
+.btn-outline {
+  color: #563d7c;
+  background-color: transparent;
+  border-color: #7598C4;
+}
+.btn-outline:hover,
+.btn-outline:focus,
+.btn-outline:active {
+  color: #fff;
+  background-color: #563d7c;
+  border-color: #7598C4;
+}
+
+/* Inverted outline button (white on dark) */
+.btn-outline-inverse {
+  color: #fff;
+  background-color: transparent;
+  border-color: #7598C4;
+}
+.btn-outline-inverse:hover,
+.btn-outline-inverse:focus,
+.btn-outline-inverse:active {
+  color: #7598C4;
+  text-shadow: none;
+  background-color: #fff;
+  border-color: #fff;
+}
+
+ /* Masthead (headings and download button) */
+.js-docs-masthead .js-docs-booticon {
+  margin: 0 auto 30px;
+}
+.js-docs-masthead h1 {
+  font-weight: 300;
+  line-height: 1;
+  color: #fff;
+}
+.js-docs-masthead .lead {
+  margin: 0 auto 30px;
+  font-size: 20px;
+  color: #fff;
+}
+ 
+.js-docs-masthead .btn {
+  width: 100%;
+  padding: 15px 30px;
+  font-size: 20px;
+}
+
+@media (min-width: 480px) {
+  .js-docs-masthead .btn {
+    width: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .js-docs-masthead {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .js-docs-masthead h1 {
+    font-size: 60px;
+  }
+  .js-docs-masthead .lead {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 992px) {
+  .js-docs-masthead .lead {
+    width: 80%;
+    font-size: 30px;
+  }
+}
+
+
+
+/*
+ * Page headers
+ */
+ 
+.js-docs-masthead,
+.js-docs-header {
+  position: relative;
+  padding: 30px 15px;
+  color: #D8E4EA;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0,0,0,.1);
+  background-color: #aaa;
+  background-image: -webkit-linear-gradient(top, #01064A 0%, #4AB6D5 100%);
+  background-image: linear-gradient(to bottom, #01064A 0%, #4AB6D5 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#01064A', endColorstr='#4AB6D5', GradientType=0);
+}
+
+
+.js-docs-header {
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+.js-docs-header h1 {
+  margin-top: 0;
+  color: #fff;
+}
+.js-docs-header p {
+  margin-bottom: 0;
+  font-weight: 300;
+  line-height: 1.4;
+}
+.js-docs-header .container {
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .js-docs-header {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    font-size: 18px;
+    text-align: left;
+  }
+  .js-docs-header h1 {
+    font-size: 48px;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 992px) {
+  .js-docs-header h1,
+  .js-docs-header p {
+    margin-right: 380px;
+  }
+}
+
+/*
+ * Main navigation
+ */
+
+.js-docs-nav {
+  margin-bottom: 0;
+  background-color: #fff;
+  border-bottom: 0;
+}
+.js-home-nav .js-nav-b {
+  display: none;
+}
+.js-docs-nav .navbar-brand,
+.js-docs-nav .navbar-nav > li > a {
+  color: #7598C4;
+  font-weight: 500;
+}
+.js-docs-nav .navbar-nav > li > a:hover,
+.js-docs-nav .navbar-nav > .active > a,
+.js-docs-nav .navbar-nav > .active > a:hover {
+  color: #7598C4;
+  background-color: #f9f9f9;
+}
+.js-docs-nav .navbar-toggle .icon-bar {
+  background-color: #563d7c;
+}
+.js-docs-nav .navbar-header .navbar-toggle {
+  border-color: #fff;
+}
+.js-docs-nav .navbar-header .navbar-toggle:hover,
+.js-docs-nav .navbar-header .navbar-toggle:focus {
+  background-color: #f9f9f9;
+  border-color: #f9f9f9;
+}
+
+/*
+ * Callouts
+ *
+ */
+
+ 
+.js-callout {
+  margin: 20px 0;
+  padding: 20px;
+  border-left: 3px solid #eee;
+}
+.js-callout h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.js-callout p:last-child {
+  margin-bottom: 0;
+}
+.js-callout code {
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+
+/* Variations */
+.js-callout-danger {
+  background-color: #fdf7f7;
+  border-color: #d9534f;
+}
+.js-callout-danger h4 {
+  color: #d9534f;
+}
+.js-callout-warning {
+  background-color: #fcf8f2;
+  border-color: #f0ad4e;
+}
+.js-callout-warning h4 {
+  color: #f0ad4e;
+}
+.js-callout-info {
+  background-color: #f4f8fa;
+  border-color: #5bc0de;
+}
+.js-callout-info h4 {
+  color: #5bc0de;
+}
+
+
+/*
+ * Side navigation
+ */
+
+/* By default it's not affixed in mobile views, so undo that */
+.js-docs-sidebar.affix {
+  position: static;
+}
+@media (min-width: 768px) {
+  .js-docs-sidebar {
+    padding-left: 20px;
+  }
+}
+
+/* First level of nav */
+.js-docs-sidenav {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* All levels of nav */
+.js-docs-sidebar .nav > li > a {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #999;
+  padding: 4px 20px;
+}
+.js-docs-sidebar .nav > li > a:hover,
+.js-docs-sidebar .nav > li > a:focus {
+  padding-left: 19px;
+  color: #EAA036;
+  text-decoration: none;
+  background-color: transparent;
+  border-left: 1px solid #EAA036;
+}
+.js-docs-sidebar .nav > .active > a,
+.js-docs-sidebar .nav > .active:hover > a,
+.js-docs-sidebar .nav > .active:focus > a {
+  padding-left: 18px;
+  font-weight: bold;
+  color: #EAA036;
+  background-color: transparent;
+  border-left: 1px solid #EAA036;
+}
+
+/* Nav: second level (shown on .active) */
+.js-docs-sidebar .nav .nav {
+  display: none; /* Hide by default, but at >768px, show it */
+  padding-bottom: 10px;
+}
+.js-docs-sidebar .nav .nav > li > a {
+  padding-top:    1px;
+  padding-bottom: 1px;
+  padding-left: 30px;
+  font-size: 12px;
+  font-weight: normal;
+}
+.js-docs-sidebar .nav .nav > li > a:hover,
+.js-docs-sidebar .nav .nav > li > a:focus {
+  padding-left: 29px;
+}
+.js-docs-sidebar .nav .nav > .active > a,
+.js-docs-sidebar .nav .nav > .active:hover > a,
+.js-docs-sidebar .nav .nav > .active:focus > a {
+  font-weight: 500;
+  padding-left: 28px;
+}
+
+/* Back to top (hidden on mobile) */
+.back-to-top {
+  display: none;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #999;
+}
+.back-to-top:hover {
+  text-decoration: none;
+  color: #563d7c;
+}
+
+@media (min-width: 768px) {
+  .back-to-top {
+    display: block;
+  }
+}
+
+
+
+/* Show and affix the side nav when space allows it */
+@media (min-width: 992px) {
+  .js-docs-sidebar .nav > .active > ul {
+    display: block;
+  }
+  /* Widen the fixed sidebar */
+  .js-docs-sidebar.affix,
+  .js-docs-sidebar.affix-bottom {
+    width: 213px;
+  }
+  .js-docs-sidebar.affix {
+    position: fixed; /* Undo the static from mobile first approach */
+    top: 20px;
+  }
+  .js-docs-sidebar.affix-bottom {
+    position: absolute; /* Undo the static from mobile first approach */
+  }
+  .js-docs-sidebar.affix-bottom .js-docs-sidenav,
+  .js-docs-sidebar.affix .js-docs-sidenav {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 1200px) {
+  /* Widen the fixed sidebar again */
+  .js-docs-sidebar.affix-bottom,
+  .js-docs-sidebar.affix {
+    width: 263px;
+  }
+}
+

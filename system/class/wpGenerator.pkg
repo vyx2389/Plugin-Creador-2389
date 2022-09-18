@@ -1,0 +1,413 @@
+<?php
+
+/**
+ * @author Jasman <jasman@ihsana.com>
+ * @copyright Ihsana IT Solution 2015
+ * @license Commercial License
+ * 
+ * @package WordPress Plugin Maker
+ */
+
+
+$properties = array(
+    'Plugin_Name' => 'Manga Scanlation',
+    'Plugin_URI' => 'http://ihsana.com/',
+    'Description' => 'Scanlation (also scanslation) is the scanning, translation, and editing of comics from a language into another language',
+    'Version' => '1.0',
+    'Author' => 'Jasman',
+    'Author_URI' => 'http://ihsana.com/jasman/',
+    'Tags' => 'manga,comic,publisher,translation',
+    'Requires_at_least' => '3.4',
+    'Tested_up_to' => '3.4',
+    'Stable_tag' => '3.4',
+    'License' => 'GNU General Public Licenses V2 or Later',
+    'License_URI' => 'http://www.gnu.org/licenses/gpl-2.0.html',
+    'Plugin_ShortName' => 'msc',
+    'textdomain' => true,
+    );
+
+$wp_gen = new wp_generator($properties);
+
+$arg = array('0' => array(
+        'name' => 'manga_thumbnail',
+        'width' => '220',
+        'height' => '320',
+        'crop' => '1',
+        ), );
+
+$wp_gen->image_sizes = $arg;
+
+
+$arg = array(
+    '0' => array(
+        'admin' => '1',
+        'construct' => '',
+        'function' => '',
+        'code' => '',
+        'src' => '/assets/js/msc_option.js',
+        'name' => 'option',
+        'version' => '1.0',
+        'deps' => array(
+            '0' => 'jquery',
+            '1' => 'thickbox',
+            ),
+        'for' => 'JS for Option',
+        ),
+    '1' => array(
+        'admin' => '1',
+        'construct' => '',
+        'function' => '',
+        'code' => '',
+        'src' => 'assets/js/msc_metabox.js',
+        'name' => 'metabox',
+        'version' => '1.0',
+        'deps' => array(
+            '0' => 'jquery',
+            '1' => 'thickbox',
+            ),
+        'for' => 'JS for metabox',
+        ),
+    );
+
+$wp_gen->javascripts = $arg;
+
+
+$arg = array(
+    '0' => array(
+        'name' => 'manga',
+        'label' => 'Manga',
+        'hooks' => array('0' => 'manga', ),
+        'markup' => '',
+        'post_meta' => array(
+            '0' => array(
+                'name' => 'author',
+                'label' => 'Author ',
+                'type' => 'text',
+                'sub_type' => 'manga',
+                'explanation' => 'Oda, Eiichiro',
+                'enum' => array(),
+                ),
+            '1' => array(
+                'name' => 'genre',
+                'label' => 'Genre',
+                'type' => 'textarea',
+                'sub_type' => 'manga',
+                'explanation' => '',
+                'enum' => array(),
+                ),
+            '2' => array(
+                'name' => 'status',
+                'label' => 'Status',
+                'type' => 'select',
+                'sub_type' => 'manga',
+                'explanation' => '',
+                'enum' => array(
+                    '0' => array(
+                        'value' => 'on-going',
+                        'label' => 'On-going',
+                        ),
+                    '1' => array(
+                        'value' => 'completed',
+                        'label' => 'Completed',
+                        ),
+                    ),
+                ),
+            '3' => array(
+                'name' => 'redrawers',
+                'label' => 'Redrawers',
+                'type' => 'text',
+                'sub_type' => 'manga',
+                'explanation' => '',
+                'enum' => array(),
+                ),
+            '4' => array(
+                'name' => 'translators',
+                'label' => 'Translators',
+                'type' => 'text',
+                'sub_type' => 'manga',
+                'explanation' => '',
+                'enum' => array(),
+                ),
+            '5' => array(
+                'name' => 'typesetters',
+                'label' => 'Typesetters',
+                'type' => 'text',
+                'sub_type' => 'manga',
+                'explanation' => '',
+                'enum' => array(),
+                ),
+            '6' => array(
+                'name' => 'raw_providers',
+                'label' => 'Raw Providers',
+                'type' => 'text',
+                'sub_type' => 'manga',
+                'explanation' => '',
+                'enum' => array(),
+                ),
+            '7' => array(
+                'name' => '',
+                'label' => '',
+                'type' => 'radio',
+                'sub_type' => 'manga',
+                'explanation' => '',
+                'enum' => array(),
+                ),
+            '8' => array(
+                'name' => '',
+                'label' => '',
+                'type' => 'checkbox',
+                'sub_type' => 'manga',
+                'explanation' => '',
+                'enum' => array(),
+                ),
+            '9' => array(
+                'name' => '',
+                'label' => '',
+                'type' => 'text',
+                'sub_type' => 'manga',
+                'explanation' => '',
+                'enum' => array(),
+                ),
+            ),
+        ),
+    '1' => array(
+        'name' => 'welcome',
+        'label' => 'Welcome',
+        'hooks' => array('2' => 'dashboard', ),
+        'markup' => '<h4>Example Metabox</h4>',
+        'post_meta' => array(),
+        ),
+    '2' => array(
+        'name' => 'chapter',
+        'label' => 'Chapter',
+        'hooks' => array('1' => 'chapter', ),
+        'markup' => '',
+        'post_meta' => array(
+            '0' => array(
+                'name' => 'manga',
+                'label' => 'Manga',
+                'type' => 'wp_dropdown_pages',
+                'sub_type' => 'manga',
+                'explanation' => 'Please select the manga',
+                ),
+            '1' => array(
+                'name' => '',
+                'label' => '',
+                'type' => 'textarea',
+                'sub_type' => 'manga',
+                'explanation' => '',
+                ),
+            '2' => array(
+                'name' => '',
+                'label' => '',
+                'type' => 'checkbox',
+                'sub_type' => 'manga',
+                'explanation' => '',
+                'enum' => array(),
+                ),
+            '3' => array(
+                'name' => '',
+                'label' => '',
+                'type' => 'radio',
+                'sub_type' => 'manga',
+                'explanation' => '',
+                'enum' => array(),
+                ),
+            '4' => array(
+                'name' => '',
+                'label' => '',
+                'type' => 'select',
+                'sub_type' => 'manga',
+                'explanation' => '',
+                'enum' => array(),
+                ),
+            '5' => array(
+                'name' => '',
+                'label' => '',
+                'type' => 'wpcolor',
+                'sub_type' => 'manga',
+                'explanation' => '',
+                'enum' => array(),
+                ),
+            '6' => array(
+                'name' => '',
+                'label' => '',
+                'type' => 'media-upload',
+                'sub_type' => 'manga',
+                'explanation' => '',
+                'enum' => array(),
+                ),
+            '7' => array(
+                'name' => '',
+                'label' => '',
+                'type' => 'wp_dropdown_pages',
+                'sub_type' => 'manga',
+                'explanation' => '',
+                'enum' => array(),
+                ),
+            '8' => array(
+                'name' => '',
+                'label' => '',
+                'type' => 'wp_dropdown_categories',
+                'sub_type' => 'manga',
+                'explanation' => '',
+                'enum' => array(),
+                ),
+            '9' => array(
+                'name' => '',
+                'label' => '',
+                'type' => 'wp_dropdown_users',
+                'sub_type' => 'manga',
+                'explanation' => '',
+                'enum' => array(),
+                ),
+            ),
+        ),
+    );
+
+$wp_gen->metaboxs = $arg;
+
+
+$arg = array(
+    '0' => array(
+        'name' => 'manga',
+        'desc' => 'Display list of manga',
+        'supports' => array(
+            '0' => 'title',
+            '1' => 'editor',
+            '2' => 'author',
+            '5' => 'thumbnail',
+            '7' => 'comments',
+            ),
+        'text-name' => 'Mangas',
+        'text-singular_name' => 'Manga',
+        'text-menu_name' => 'Manga',
+        'text-name_admin_bar' => 'Manga',
+        'text-add_new' => 'Add New',
+        'text-add_new_item' => 'Add New Manga',
+        'text-new_item' => 'New Manga',
+        'text-edit_item' => 'Edit Manga',
+        'text-view_item' => 'View Manga',
+        'text-all_items' => 'All Manga',
+        'text-search_items' => 'Search Manga',
+        'text-parent_item_colon' => 'Parent Mangas',
+        'text-not_found' => 'Not found',
+        'text-not_found_in_trash' => 'No manga found in Trash',
+        ),
+    '1' => array(
+        'name' => 'chapter',
+        'desc' => 'Display all chapter of manga',
+        'supports' => array(
+            '0' => 'title',
+            '1' => 'editor',
+            '2' => 'author',
+            '5' => 'thumbnail',
+            '7' => 'comments',
+            ),
+        'text-name' => 'Chapters',
+        'text-singular_name' => 'Chapter',
+        'text-menu_name' => 'Chapters',
+        'text-name_admin_bar' => 'Chapters',
+        'text-add_new' => 'add New',
+        'text-add_new_item' => 'add New Chapter',
+        'text-new_item' => 'New Chapter',
+        'text-edit_item' => 'Edit Chapter',
+        'text-view_item' => 'View Chapter',
+        'text-all_items' => 'All Chapter',
+        'text-search_items' => 'Search Chapters',
+        'text-parent_item_colon' => 'Parent Chapters',
+        'text-not_found' => 'No found',
+        'text-not_found_in_trash' => 'No chapter found in Trash',
+        ),
+    );
+
+$wp_gen->post_types = $arg;
+
+
+$arg = array(
+    '0' => array(
+        'hooks' => array('0' => 'settings_page_msc_settings', ),
+        'admin' => '1',
+        'version' => '1.0',
+        'src' => 'assets/css/msc_option.css',
+        'name' => 'option',
+        ),
+    '1' => array(
+        'hooks' => array(
+            '0' => 'post.php',
+            '1' => 'post-new.php',
+            '2' => 'index.php',
+            ),
+        'admin' => '1',
+        'version' => '1.0',
+        'src' => 'assets/css/msc_metabox.css',
+        'name' => 'metabox',
+        ),
+    );
+
+$wp_gen->styles = $arg;
+
+
+$arg = array(
+    '0' => array(
+        'id' => 'root_toolbar',
+        'anchor' => 'Manga Scanlation',
+        'url' => '#',
+        'parent' => '',
+        ),
+    '1' => array(
+        'id' => 'settings_toolbar',
+        'anchor' => 'Settings',
+        'url' => 'options-general.php?page=msc_settings',
+        'parent' => 'root_toolbar',
+        ),
+    '2' => array(
+        'id' => 'help_toolbar',
+        'anchor' => 'Help',
+        'url' => 'options-general.php?page=msc_help',
+        'parent' => 'root_toolbar',
+        ),
+    );
+
+$wp_gen->toolbars = $arg;
+
+
+$arg = array(
+    '0' => array(
+        'id' => 'read_recently',
+        'title' => 'Manga are Read Recently',
+        'desc' => 'Displays a list of manga last read by visitors',
+        'markup' => '<h4>This Front End Widget Code</h4>',
+        'option' => array('0' => array(
+                'name' => 'max_show',
+                'label' => 'Number of mangas to show:',
+                'default' => '10',
+                ), ),
+        ),
+    '1' => array(
+        'id' => 'manga_last_updated',
+        'title' => 'Manga Last Updated',
+        'desc' => 'Displays a list of manga last updated',
+        'markup' => '<h4>This Front End Widget Code</h4>',
+        'option' => array('0' => array(
+                'name' => 'max_show',
+                'label' => 'Number of mangas to show:',
+                'default' => '10',
+                ), ),
+        ),
+    '2' => array(
+        'id' => 'manga_release_schedule',
+        'title' => 'Manga Release Schedule',
+        'desc' => 'Displays count release date',
+        'markup' => '<h4>This Front End Widget Code</h4>',
+        'option' => array('0' => array(
+                'name' => 'max_show',
+                'label' => 'Number of mangas to show:',
+                'default' => '',
+                ), ),
+        ),
+    );
+
+$wp_gen->widgets = $arg;
+
+?>

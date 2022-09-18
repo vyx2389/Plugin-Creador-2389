@@ -1,0 +1,27 @@
+ChangeLog:
+
+Rev 19.03.04
+- Remove: REST-API Plugin 
+- Add: REST-API Option to Post Type
+
+Rev 18.12.28
+- Improved: REST-API Meta Post
+
+Rev 18.09.26
+- Improved: Categories and Featured Images
+
+Rev 18.02.09
+- Fix Error Reporting
+
+Rev 17.05.15
+- Remove WP Editor in option 
+- WP Editor in metabox
+
+Rev 17.01.11
+- Add new features REST-API 2
+
+Rev 17.01.11
+- Fix media upload and multi upload
+
+Rev 16.12.17
+- Add new feature taxonomies menu

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+	<meta http-equiv="content-type" content="text/html" />
+	<meta name="author" content="Jasman" />  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>FAQs</title>
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/css/docs.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<!-- nav -->
+<div class="navbar navbar-static-top js-docs-nav" id="top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="index.html" class="navbar-brand">WP Plugin Maker</a>
+    </div>
+    <div class="collapse navbar-collapse js-navbar-collapse" role="navigation" >
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="getting-started.html">Getting started</a>
+        </li>
+        <li>
+          <a href="code.html">Code Explanation</a>
+        </li>
+        <li>
+          <a href="licenses.html">Licenses</a>
+        </li>
+        <li class="active">
+          <a href="faqs.html">FAQs</a>
+        </li>
+        <li>
+          <a href="mailto:info@ihsana.com">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- .//nav -->
+
+<div class="js-docs-header" id="content">
+      <div class="container">
+        <h1>FAQs</h1>
+        <p>Frequently asked questions (FAQ)</p>
+      </div>
+</div>
+
+<div class="container">
+    <div class="col-md-9">
+ 
+ 
+        <!-- Code Explanation -->
+        
+        <h2 id="faqs" class="page-header">Questions and Answers</h2>
+        <h3 id="faqs001">How to protect files that have been edited?</h3>
+        <div>
+        You can put the file in the folder:
+        <pre>/plugin-maker/project/plugins/assets/your_plugin/*</pre>
+        will be copied to 
+        <pre>/public_html/wp-content/plugins/your_plugin/*</pre>
+        </div>
+
+<p><img data-src="holder.js/994x687" src="assets/images/screenshoot-3001.jpg" class="img-thumbnail" height="687" width="994"/></p>
+<p>PHP code must edit manual, to edit or add a file manually, copy the files to be edited to folder 
+<pre>\plugin-maker\projects\plugins\assets\example_plugin\includes\</pre>
+then edit that file, because all files in <pre>\plugin-maker\projects\plugins\assets\example_plugin\</pre>
+will be copied into the plugins folder when using the tool. So if it is not put there will be overwrite.
+</p>
+<hr />
+        <h3 id="faqs002">When i try to submit it it says ops, non authenticated only? what am i missing?</h3>
+        <p>no missing, that means please LOGOUT, or use other browser</p>
+        <hr />
+        <h3 id="faqs003">How to create a shortcode with HTML Markup?</h3>
+        <p>This code can be embedded in the shortcode, consider the example image below:</p>
+        <p><img data-src="holder.js/994x687" src="assets/images/screenshoot-3002.jpg" class="img-thumbnail" height="687" width="994"/></p>
+<hr />
+        <!-- //Code Explanation -->
+        <br /><br /><br /><br />
+    </div>
+    <div class="col-md-3">
+          <div class="js-docs-sidebar hidden-print" role="complementary">
+            <ul class="nav docs-sidenav">
+                <li>
+                  <a href="#faqs">Questions and Answers</a>
+                  <ul class="nav">
+                    <li><a href="#faqs001">How to protect files that have been edited?</a></li>
+                    <li><a href="#faqs002">When i try to submit it it says ops, non authenticated only? what am i missing?</a></li>
+                    <li><a href="#faqs003">How to create a shortcode with HTML Markup?</a></li>
+                    
+                  </ul>
+                </li>              
+            </ul>
+       </div>
+    </div>
+</div>
+
+
+<div class="footer">
+    <div class="container">
+        <p>Copyright &copy; 2015 <a href="http://ihsana.com">Ihsana Global Solusindo</a>. All rights reserved.</p>
+    </div>
+</div>
+<script src="./assets/js/holder.min.js"></script>
+<script src="./assets/js/jquery.min.js"></script>
+<script src="./assets/js/bootstrap.min.js"></script>
+<script src="./assets/js/docs.js"></script>
+
+</body>
+</html>
